@@ -1,6 +1,6 @@
 <template>
     <div>
-      <button type="button" @click="add()">添加</button>
+      <button type="button" @click="add()">{{msg}}</button>
     </div>
 </template>
 
@@ -9,10 +9,15 @@ import store from '@/store/index.js'
 export default {
   name: 'info',
   store,
+    data() {
+      return {
+          msg: 'hello'
+      }
+
+    },
   methods: {
     add () {
       store.commit('increase')
-      console.log('h')
     }
   }
 }
