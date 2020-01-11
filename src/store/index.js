@@ -12,8 +12,6 @@ export default new Vuex.Store({
       this.state.count++
     }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  modules: {}
 })
