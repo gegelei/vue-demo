@@ -1,5 +1,5 @@
 <template>
-    <li @click="del">{{content}}</li>
+    <div @click="del">{{content}}</div>
 </template>
 
 <script>
