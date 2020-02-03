@@ -43,6 +43,13 @@
             </slotTest>
 
         </div>
+        ------------------------------------------------------------
+        <!--   非父子组件传值 bus/观察者模式 实现-->
+        <div>
+            <busTest content="sea"></busTest>
+            <busTest content="sing"></busTest>
+
+        </div>
     </div>
 </template>
 <script>
@@ -50,6 +57,10 @@
   import TodoItem from '../components/TodoItem'
   import Counter from '../components/Counter'
   import SlotTest from '../components/SlotTest'
+  import BusTest from '../components/BusTest'
+  import Vue from "vue";
+  //将bus属性挂载到所有的vue实例中
+  Vue.prototype.bus = new Vue();
 
   export default {
     name: 'info',
@@ -58,7 +69,7 @@
         'todo-item': TodoItem,
         'counter': Counter,
         'slotTest': SlotTest,
-
+        'busTest': BusTest,
     },
     data () {
       return {
@@ -106,6 +117,3 @@
 
 </script>
 
-<style scoped>
-
-</style>
