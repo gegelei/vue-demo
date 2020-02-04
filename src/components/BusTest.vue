@@ -14,7 +14,7 @@
     name: 'BusTest',
     methods: {
         handleBus() {
-            this.bus.$emit('changeBus',this.newContent);
+            this.bus.$emit('changeBus',this.content);
         }
     },
       mounted: function () {

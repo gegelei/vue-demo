@@ -110,7 +110,6 @@
             this.total1 += value;
         },
         handletest () {
-            ;
         },
     }
   }
